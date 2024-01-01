@@ -1,10 +1,9 @@
 ---
 interface Props {
-    link: string;
-    title: string;
+  link: string;
+  title: string;
 }
 const { link, title } = Astro.props;
 ---
-<div>
-    <a href={link}>{title}</a>
-</div>
+
+<a href={link} class="bg-neutral-800 px-28 py-4 text-center sm:px-40 hover:bg-neutral-700 transition-colors duration-300">{title}</a>

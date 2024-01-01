@@ -2,27 +2,33 @@
 import ProfilePicture from "../components/ProfilePicture.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
 import pfp from "../../public/pfp.jpg";
+import LinkCard from "../components/LinkCard.astro";
 
-const links = [{
-  name: "GitHub",
-  url: "https://github.com/sajayprakash",
-},
-{
-  name: "LinkedIn",
-  url: "https://www.linkedin.com/in/sajayprakash/",
-},
-{
-  name: "Email",
-  url: "mailto:contact@sajayprakash.com"}
-  ];
+const links = [
+  {
+    name: "GitHub",
+    url: "https://github.com/sajayprakash",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/sajayprakash/",
+  },
+  {
+    name: "Email",
+    url: "mailto:contact@sajayprakash.com",
+  },
+];
 ---
 
 <BaseLayout title="Sajay Prakash | Links">
   <main>
-    <div class="flex flex-col justify-center items-center">
-      <div class="flex flex-col items-center justify-center gap-y-4 mt-16">
+    <div class="flex flex-col items-center justify-center gap-y-6">
+      <div class="mt-16 flex flex-col items-center justify-center gap-y-4">
         <ProfilePicture src={pfp} alt="Sajay Prakash" />
         <h1 class="text-xl sm:text-3xl">Sajay Prakash</h1>
+      </div>
+      <div class="flex flex-col gap-y-4">
+        {links.map((link) => <LinkCard link={link.url} title={link.name} />)}
       </div>
     </div>
   </main>
