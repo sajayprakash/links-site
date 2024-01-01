@@ -1,14 +1,28 @@
 ---
 import ProfilePicture from "../components/ProfilePicture.astro";
 import BaseLayout from "../layout/BaseLayout.astro";
+import pfp from "../../public/pfp.jpg";
+
+const links = [{
+  name: "GitHub",
+  url: "https://github.com/sajayprakash",
+},
+{
+  name: "LinkedIn",
+  url: "https://www.linkedin.com/in/sajayprakash/",
+},
+{
+  name: "Email",
+  url: "mailto:contact@sajayprakash.com"}
+  ];
 ---
 
 <BaseLayout title="Sajay Prakash | Links">
   <main>
     <div class="flex flex-col justify-center items-center">
       <div class="flex flex-col items-center justify-center gap-y-4 mt-16">
-        <ProfilePicture src="/pfp.jpg" alt="Sajay Prakash" />
-        <h1 class="bg-pink-200/70 text-neutral-900 p-2 rounded-full">@sajayprakash</h1>
+        <ProfilePicture src={pfp} alt="Sajay Prakash" />
+        <h1 class="text-xl sm:text-3xl">Sajay Prakash</h1>
       </div>
     </div>
   </main>
