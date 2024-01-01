@@ -5,6 +5,11 @@ import BaseLayout from "../layout/BaseLayout.astro";
 
 <BaseLayout title="Sajay Prakash | Links">
   <main>
-    <ProfilePicture src="/pfp.jpg" alt="Sajay Prakash" />
+    <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col items-center justify-center gap-y-4 mt-16">
+        <ProfilePicture src="/pfp.jpg" alt="Sajay Prakash" />
+        <h1 class="bg-pink-200/70 text-neutral-900 p-2 rounded-full">@sajayprakash</h1>
+      </div>
+    </div>
   </main>
 </BaseLayout>
